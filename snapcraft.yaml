@@ -1,0 +1,117 @@
+name: icon-theme-tela
+build-base: core24
+base: bare
+version: '2025-06-28'
+platforms:
+  all:
+    build-on: [amd64]
+    build-for: [all]
+summary: Tela icon theme
+description: |
+  A Snap that allows you to use Tela icons in Snap apps
+grade: stable
+confinement: strict
+
+slots:
+  icon-themes:
+    interface: content
+    source:
+      read:
+        - $SNAP/share/icons/Tela
+        - $SNAP/share/icons/Tela-black
+        - $SNAP/share/icons/Tela-black-dark
+        - $SNAP/share/icons/Tela-black-light
+        - $SNAP/share/icons/Tela-blue
+        - $SNAP/share/icons/Tela-blue-dark
+        - $SNAP/share/icons/Tela-blue-light
+        - $SNAP/share/icons/Tela-brown
+        - $SNAP/share/icons/Tela-brown-dark
+        - $SNAP/share/icons/Tela-brown-light
+        - $SNAP/share/icons/Tela-circle
+        - $SNAP/share/icons/Tela-circle-black
+        - $SNAP/share/icons/Tela-circle-black-dark
+        - $SNAP/share/icons/Tela-circle-black-light
+        - $SNAP/share/icons/Tela-circle-blue
+        - $SNAP/share/icons/Tela-circle-blue-dark
+        - $SNAP/share/icons/Tela-circle-blue-light
+        - $SNAP/share/icons/Tela-circle-brown
+        - $SNAP/share/icons/Tela-circle-brown-dark
+        - $SNAP/share/icons/Tela-circle-brown-light
+        - $SNAP/share/icons/Tela-circle-dark
+        - $SNAP/share/icons/Tela-circle-dracula
+        - $SNAP/share/icons/Tela-circle-dracula-dark
+        - $SNAP/share/icons/Tela-circle-dracula-light
+        - $SNAP/share/icons/Tela-circle-green
+        - $SNAP/share/icons/Tela-circle-green-dark
+        - $SNAP/share/icons/Tela-circle-green-light
+        - $SNAP/share/icons/Tela-circle-grey
+        - $SNAP/share/icons/Tela-circle-grey-dark
+        - $SNAP/share/icons/Tela-circle-grey-light
+        - $SNAP/share/icons/Tela-circle-light
+        - $SNAP/share/icons/Tela-circle-manjaro
+        - $SNAP/share/icons/Tela-circle-manjaro-dark
+        - $SNAP/share/icons/Tela-circle-manjaro-light
+        - $SNAP/share/icons/Tela-circle-nord
+        - $SNAP/share/icons/Tela-circle-nord-dark
+        - $SNAP/share/icons/Tela-circle-nord-light
+        - $SNAP/share/icons/Tela-circle-orange
+        - $SNAP/share/icons/Tela-circle-orange-dark
+        - $SNAP/share/icons/Tela-circle-orange-light
+        - $SNAP/share/icons/Tela-circle-pink
+        - $SNAP/share/icons/Tela-circle-pink-dark
+        - $SNAP/share/icons/Tela-circle-pink-light
+        - $SNAP/share/icons/Tela-circle-purple
+        - $SNAP/share/icons/Tela-circle-purple-dark
+        - $SNAP/share/icons/Tela-circle-purple-light
+        - $SNAP/share/icons/Tela-circle-red
+        - $SNAP/share/icons/Tela-circle-red-dark
+        - $SNAP/share/icons/Tela-circle-red-light
+        - $SNAP/share/icons/Tela-circle-ubuntu
+        - $SNAP/share/icons/Tela-circle-ubuntu-dark
+        - $SNAP/share/icons/Tela-circle-ubuntu-light
+        - $SNAP/share/icons/Tela-circle-yellow
+        - $SNAP/share/icons/Tela-circle-yellow-dark
+        - $SNAP/share/icons/Tela-circle-yellow-light
+        - $SNAP/share/icons/Tela-dark
+        - $SNAP/share/icons/Tela-dracula
+        - $SNAP/share/icons/Tela-dracula-dark
+        - $SNAP/share/icons/Tela-dracula-light
+        - $SNAP/share/icons/Tela-green
+        - $SNAP/share/icons/Tela-green-dark
+        - $SNAP/share/icons/Tela-green-light
+        - $SNAP/share/icons/Tela-grey
+        - $SNAP/share/icons/Tela-grey-dark
+        - $SNAP/share/icons/Tela-grey-light
+        - $SNAP/share/icons/Tela-light
+        - $SNAP/share/icons/Tela-manjaro
+        - $SNAP/share/icons/Tela-manjaro-dark
+        - $SNAP/share/icons/Tela-manjaro-light
+        - $SNAP/share/icons/Tela-nord
+        - $SNAP/share/icons/Tela-nord-dark
+        - $SNAP/share/icons/Tela-nord-light
+        - $SNAP/share/icons/Tela-orange
+        - $SNAP/share/icons/Tela-orange-dark
+        - $SNAP/share/icons/Tela-orange-light
+        - $SNAP/share/icons/Tela-pink
+        - $SNAP/share/icons/Tela-pink-dark
+        - $SNAP/share/icons/Tela-pink-light
+        - $SNAP/share/icons/Tela-purple
+        - $SNAP/share/icons/Tela-purple-dark
+        - $SNAP/share/icons/Tela-purple-light
+        - $SNAP/share/icons/Tela-red
+        - $SNAP/share/icons/Tela-red-dark
+        - $SNAP/share/icons/Tela-red-light
+        - $SNAP/share/icons/Tela-ubuntu
+        - $SNAP/share/icons/Tela-ubuntu-dark
+        - $SNAP/share/icons/Tela-ubuntu-light
+        - $SNAP/share/icons/Tela-yellow
+        - $SNAP/share/icons/Tela-yellow-dark
+        - $SNAP/share/icons/Tela-yellow-light
+parts:
+  icon-themes:
+    plugin: dump
+    source: https://github.com/Kyuyrii/icon-theme-tela-snap/releases/download/2025-06-28/icon-theme-tela-snap-creation-files_2025-06-28.deb
+    organize:
+      usr/share/icons: share/icons
+    prime:
+      - share/icons/
