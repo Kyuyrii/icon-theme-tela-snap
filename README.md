@@ -1,0 +1,1 @@
+# icon-theme-tela-snap
